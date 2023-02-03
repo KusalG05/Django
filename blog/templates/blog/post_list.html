@@ -28,5 +28,17 @@
         dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.
       </p>
     </article>
+    <!-- {{posts}} -->
+    <!-- {% for post in posts %} {{ post }} <br /> -->
+    <!-- {% endfor %} -->
+
+    {% for post in posts %}
+    <article>
+      <time>published: {{ post.published_date }}</time>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+      <hr />
+    </article>
+    {% endfor %}
   </body>
 </html>
